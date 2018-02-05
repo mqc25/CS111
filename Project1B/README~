@@ -1,0 +1,33 @@
+NAME: Minh Cao
+EMAIL: minhqcao@gmail.com
+ID: 804844568
+
+client.c:
+	Client main program to initialize character-at-a-time mode and create TCP 
+	socket to connect to server with --port=portNum mandatory argument. client
+	will send command to server shell and receiver output from shell of server.
+	Other optional argument include:
+	      --log=filename  keep a log file of send and receive at client side
+	      --compress             compress data send to server and from server
+	      --hostname=hostname    use hostname differ than the default localhost	
+
+server.c
+	Server main program to initialize communication with client via TCP socket
+	with mandatory --port=portNum to open listening channel to client. Sever will
+	receive input from client and pass it to shell as well as passing output 
+	from shell to client. Other optional command include:
+	     --compress	      	    compress data send to client
+
+Makefile:
+	Basic make options are:
+	      default: create both server and client executable file
+	      client: create only client executable file
+	      server: create only server executable file
+	      clean: delete all executable and .tar file
+	      dist: create tarball of .c Makefile and README in format
+	      	    	   lab1b-<ID>.tar.gz	
+
+README:
+	Overview of the content of this project and basic usage guideline
+	
+	

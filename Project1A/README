@@ -1,0 +1,16 @@
+NAME: Minh Cao
+EMAIL: minhqcao@gmail.com
+ID: 804844568
+
+lab1a.c: Contain the main program code which have two mode. One without argument simply
+	 pass stdin to stdout. Other with -s argument does extra step of passing
+ 	 terminal stdin to shell and print output from shell back to terminal stdout.
+	 Both run under one-character-at-a-time mode, read, write with 256 char buffer
+	 and restore default terminal setting upon exit.
+	
+Makefile: default: compile executable main program lab1a
+	  clean: restore to untar state 
+	  dist: make tarball format lab1a-<myID>
+	
+README: Contain brief description of each contents of each files in tarball
+	

@@ -1,0 +1,32 @@
+NAME: Minh Cao
+EMAIL: minhqcao@gmail.com
+ID: 804844568
+
+lab0.c:
+This is the source code of the program. Function getopt_long() was used to get
+input argument of the program to be. The program will redirect input file 
+to stdin, output file to stdout and then copy the content of stdin to stdout.
+Redirection was done using dup() to save stdin, stdout to restore latter and
+dup2() to redirect from file to stdin, stdout. Copying from stdin to stdout 
+was done using fread and fwrite with buffer size of 4kB. Option -s would cause
+segmentation fault and will be executed before all other process. Option -c 
+will catch SIGSEGV signal and output catching message with exit code 4.
+
+Makefile:
+  default: compile into lab0 executable with debugging option -g. 
+  dist: create a tarball of the package with format lab0-<id>.tar.gz
+  check: doing simple smoke-test case which include:
+  	  if segfault was generated and catch correctly
+	  if basic copying from file to file result in identical input and
+	       output file
+	  if program are able to report reading error from non-readable file
+	  if program are able to report writing error from non-writeable file
+  clean: remove executable, tarball, .txt, object file generated during make
+  
+README: Short summary of the project, how the implementation was done
+
+backtrace.png: Screenshot of the backtrace of segmentation fault in gdb with
+	       		  stack trace included
+	       
+breakpoint.png: Screenshot of breakpoint at the line causing segmentation fault
+			   with inspection of the content of the pointer
