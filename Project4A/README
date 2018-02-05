@@ -1,0 +1,12 @@
+NAME: Minh Cao
+EMAIL: minhqcao@gmail.com
+ID: 804844568
+
+This folder contain:
+
+my_beaglebone.jpg	My selfie picture with installed BeagleBone
+connected.png		Screen-shot of terminal show name of devices and Wifi config
+copy.png			Screen-shot of copying hello.c from PC to BeagleBone via SFTP
+build_run.png		Build and run the hello.c copy from PC
+git.png				Screen-shot shown installation and cloning my git repository
+README				Short description of content of this folder
